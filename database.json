@@ -1,0 +1,4 @@
+{
+  "bananaTypes": ["Apple Banana", "Cavendish", "Lady Finger", "Red Dacca"],
+  "availableStock": [100, 200, 300, 400]
+}
