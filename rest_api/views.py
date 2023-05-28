@@ -1,5 +1,6 @@
 import json
 
+from django.shortcuts import HttpResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
@@ -21,3 +22,6 @@ def get_stocks(request):
         return Response({'error':False, 'bananaStock': response}, status=200)
     except Exception as e:
         return Response({'error':True, 'message': str(e)}, status=500)
+    
+def home(request):
+    return HttpResponse("<h1>Welcome to Django REST API</h1><br><h4>Go to <a href='/rest/get_stocks'>/rest/get_stocks</a> to see the API</h4><br><h4>Go to my <a href='https://blog.akashrchandran.in/how-to-create-rest-api-using-django-rest-framework' target='_blank'>Blog</a> to see the detailed guide how I created this.</h4>")
